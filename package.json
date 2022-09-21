@@ -10,14 +10,14 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:zap.helloWorld"
+    "onCommand:zap.test"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "zap.helloWorld",
-        "title": "Hello World"
+        "command": "zap.test",
+        "title": "ZAP Initial Test"
       }
     ]
   },
