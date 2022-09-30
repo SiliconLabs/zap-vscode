@@ -6,10 +6,6 @@ This repo contains the VSCode extension for [zap](https://github.com/project-chi
 
 TBD.
 
-## Requirements
-
-TBD.
-
 ## Extension Settings
 
 TBD.
@@ -20,5 +16,10 @@ No release yet.
 
 ## Development Setup
 
-After you clone this repo, run:
-`npm install`
+- Make sure you have recent version of node.js installed.
+- Make sure you have recent version of VSCode installed.
+- Clone this repo.
+- Run: `npm install`
+- In VSCode, do "File -> Open Directory...", pointing to the repo location
+- Run `F5` to compile the extension execute VSCode runtime with the extension loaded.
+
