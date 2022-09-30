@@ -18,3 +18,7 @@ TBD.
 
 No release yet.
 
+## Development Setup
+
+After you clone this repo, run:
+`npm install`
