@@ -3,6 +3,7 @@
   "displayName": "ZAP Integration",
   "description": "Zcl Advanced Platform VSCode support.",
   "version": "0.0.1",
+  "publisher": "Silicon Labs",
   "engines": {
     "vscode": "^1.71.0"
   },
