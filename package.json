@@ -10,7 +10,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:zap.test"
+    "onCommand:zap.test",
+    "onCommand:zap.show"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -18,6 +19,22 @@
       {
         "command": "zap.test",
         "title": "ZAP Initial Test"
+      },
+      {
+        "command": "zap.show",
+        "title": "ZAP User Interface"
+      }
+    ],
+    "configuration": [
+      {
+        "title": "ZAP Installation Directory",
+        "properties": {
+          "zap.dir": {
+            "type": "string",
+            "default": "",
+            "description": "Specifis the location where ZAP is installed or where ZAP repo is cloned into."
+          }
+        }
       }
     ]
   },
