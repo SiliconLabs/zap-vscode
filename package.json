@@ -11,18 +11,21 @@
   ],
   "activationEvents": [
     "onCommand:zap.test",
-    "onCommand:zap.show"
+    "onCommand:zap.show",
+    "workspaceContains:**/*.zap"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "zap.test",
-        "title": "ZAP Initial Test"
+        "title": "ZAP Initial Test",
+        "icon": "zap.svg"
       },
       {
         "command": "zap.show",
-        "title": "ZAP User Interface"
+        "title": "ZAP User Interface",
+        "icon": "zap.svg"
       }
     ],
     "configuration": [
