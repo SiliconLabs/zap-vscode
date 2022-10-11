@@ -11,4 +11,27 @@
  *
  ******************************************************************************/
 
+import { dir } from "console";
+
 // The purpose of this module is to provide apack.json integration.
+// It locates and parses the apack.json file, and then further it
+// is able to execute given functions from inside the file.
+
+// Class that describes an adapter pack
+class AdapterPack {
+  directory: String;
+
+  constructor(directory: String) {
+    this.directory = directory
+  }
+
+  executeFunction(functionName: String, ...args: String[]) {
+
+  }
+}
+
+// This function reads the adapter pack from the specified directory.
+export function readAdapterPack(directory: String): AdapterPack { 
+  return new AdapterPack(directory)
+}
+
