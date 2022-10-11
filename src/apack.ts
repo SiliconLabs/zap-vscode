@@ -11,23 +11,27 @@
  *
  ******************************************************************************/
 
-// Main extension entry point.
-import * as vscode from 'vscode';
+import { dir } from "console";
 
-export function activate(context: vscode.ExtensionContext) {
-	
-	vscode.window.showInformationMessage('Extension "zap" is now active!');
+// The purpose of this module is to provide apack.json integration.
+// It locates and parses the apack.json file, and then further it
+// is able to execute given functions from inside the file.
 
-	let simpleMessage = vscode.commands.registerCommand('zap.test', () => {
-		vscode.window.showInformationMessage('ZAP Integration!');
-	});
+// Class that describes an adapter pack
+class AdapterPack {
+  directory: String;
 
-	let showZapUi = vscode.commands.registerCommand('zap.show', () => {
-		vscode.commands.executeCommand('simpleBrowser.show', 'http://localhost:9070')
-	})
+  constructor(directory: String) {
+    this.directory = directory
+  }
 
-	context.subscriptions.push(simpleMessage);
-	context.subscriptions.push(showZapUi);
+  executeFunction(functionName: String, ...args: String[]) {
+
+  }
 }
 
-export function deactivate() {}
+// This function reads the adapter pack from the specified directory.
+export function readAdapterPack(directory: String): AdapterPack { 
+  return new AdapterPack(directory)
+}
+
