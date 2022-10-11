@@ -2,13 +2,18 @@ import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
 	
-	console.log('Extension "zap" is now active!');
+	vscode.window.showInformationMessage('Extension "zap" is now active!');
 
-	let disposable = vscode.commands.registerCommand('zap.test', () => {
+	let simpleMessage = vscode.commands.registerCommand('zap.test', () => {
 		vscode.window.showInformationMessage('ZAP Integration!');
 	});
 
-	context.subscriptions.push(disposable);
+	let showZapUi = vscode.commands.registerCommand('zap.show', () => {
+		vscode.commands.executeCommand('simpleBrowser.show', 'http://localhost:9070')
+	})
+
+	context.subscriptions.push(simpleMessage);
+	context.subscriptions.push(showZapUi);
 }
 
 export function deactivate() {}
